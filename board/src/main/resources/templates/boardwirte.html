@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물작성</title>
+</head>
+<body>
+    <div class="layer">
+        <form action="/board/writepro" method="post">
+            <input name="title" type="text">
+            <textarea name="content"></textarea>
+            <button type="submit">저장</button>
+        </form>
+
+    </div>
+</body>
+<style>
+    .layer {
+        background: linear-gradient(to right, #f990a7, #c5c6c6, #b89cff); /* 몽환적인 그라데이션 적용 */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+    }
+
+    .layer input[type="text"],
+    .layer textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .layer butt {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background: #f990a7; /* 분홍색 배경색 지정 */
+        color: #fff; /* 버튼 텍스트 색상 지정 */
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s ease; /* 부드러운 호버 효과를 위한 트랜지션 추가 */
+    }
+
+    /* 버튼에 호버 효과 추가 */
+    .layer butt:hover {
+        background: #c5c6c6; /* 호버 시 배경색 변경 */
+    }
+
+</style>
+</html>

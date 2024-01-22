@@ -1,0 +1,65 @@
+<!-- boardlist.html -->
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 리스트</title>
+</head>
+<body>
+<div class="layer">
+    <table>
+        <thead>
+        <tr>
+            <th>글번호</th>
+            <th>글 제목</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 여기에 서버에서 받아온 게시물 목록을 반복문으로 출력 -->
+        <!-- 예시로 1번과 "게시물 제목"을 출력하도록 했습니다. -->
+        <tr th:each="board : ${list}">
+            <td th:text="${board.id}"></td>
+            <td th:text="${board.title}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<style>
+    /* 위에서 제공한 CSS 코드를 그대로 사용 */
+
+    .layer {
+        max-width: 800px;
+        margin: 20px auto;
+        background: linear-gradient(to right, #f990a7, #c5c6c6, #b89cff);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    th, td {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f990a7;
+        color: white;
+    }
+</style>
+</html>
